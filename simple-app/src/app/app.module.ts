@@ -4,10 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { StudentComponent } from './student/student.component';
-
+import { MediaComponent } from './media/media.component';
+import { FileSizeKb, FileSizeMb} from './pipeDemo'
 @NgModule({
   declarations: [
-    AppComponent, UserComponent, StudentComponent
+    AppComponent, UserComponent, StudentComponent, MediaComponent,
+    FileSizeKb, FileSizeMb
   ],
   imports: [
     BrowserModule

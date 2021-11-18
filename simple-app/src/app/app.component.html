@@ -1,26 +1,4 @@
 <div>
   <h2>Welcome to angular</h2>
-  <div>
-    <p>
-      Id: {{emp1.id}}, Name: {{emp1.name}}, 
-      Gender: {{emp1.gender}} Salary: {{emp1.salary}}
-      Dob: {{emp1.dob}}
-    </p>
-    <hr/>
-    <h3>Date pipe</h3>
-     <p>Date : {{emp1.dob | date}}</p>
-     <p>Date in dd-MM-yyyy {{emp1.dob | date : 'dd-MM-yyyy'}}</p>
-     <p>Date in dd-MMM-yyyy {{emp1.dob | date : 'dd-MMM-yyyy'}}</p>
-     <hr/>
-     <h3>Uppercase & Lowercase</h3>
-     <p>Uppercase: {{emp1.name | uppercase}}, 
-       Lowercase: {{emp1.name | lowercase}}</p>
-      <hr />
-      <h3>Currency</h3>
-      <p>Salary default symbol: {{emp1.salary | currency}}</p>
-      <p>Salary INR symbol: {{emp1.salary | currency : 'INR'}}</p>
-      <p>Salary JPY symbol: {{emp1.salary | currency : 'JPY'}}</p>
-      <h3>Json</h3>
-      <p>{{emp1 | json}}</p>
-  </div>
+  <app-media></app-media>
 </div>
