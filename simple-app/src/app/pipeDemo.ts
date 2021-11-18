@@ -18,4 +18,14 @@ export class FileSizeKb implements PipeTransform {
         return kiloByte+" KB";
     }
 }
+@Pipe({
+    name : 'salutation'
+})
+export class NameBasedOnGender implements PipeTransform {
+    transform(value: string, genderValue : string) : string {
+        if(genderValue.toUpperCase() == 'MALE')
+            return "Mr. "+value;
+        return "Ms. "+value;
+    }
+}
  

@@ -8,4 +8,10 @@
         Name: {{fileInfo.name}},
         Size: {{fileInfo.size | kb}}
     </p>
+    <p>
+        Hello {{user1.name | salutation: user1.gender}}
+    </p>
+    <p>
+        Hello {{user2.name | salutation : user2.gender}}
+    </p>
 </div>

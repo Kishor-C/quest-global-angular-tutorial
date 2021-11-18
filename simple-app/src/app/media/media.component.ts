@@ -7,4 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MediaComponent  {
   fileInfo = {name : "album", size : 25}
+  user1 = {name : "Raj", gender : "Male"};
+  user2 = {name : "Jennifer", gender : "Female"}
 }
