@@ -1,0 +1,14 @@
+<div>
+    <h3>Passing data from view to component through event</h3>
+    <hr />
+    Enter username <input type = "text"  name = "user" #tf1>
+    <br />
+    Enter password <input type = "password" name = "pass" #tf2>
+    <br />
+    <input type = "button" value = "Send" 
+            (click) = "handleClick(tf1.value, tf2.value)">
+    <br />
+    <div>
+        Username: {{username}} and Password: {{password}}
+    </div>
+</div>

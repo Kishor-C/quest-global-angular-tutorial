@@ -1,0 +1,14 @@
+<div>
+    <h3>Property Binding Demo!</h3>
+    <button (click) = " toggleDisabled()">MyButton</button>
+    <br /> <br />
+    <button [disabled] = "isDisabled">Process</button>
+    <br />
+    <p>Is Disabled: {{isDisabled}}</p>
+    <div [hidden] = "isDisabled">This content is using isDisabled</div>
+    <div [innerText] = "divContent"></div>
+    <input type = "text" (input) = "validateInput(tf.value)" #tf>
+    <div class = "alert alert-danger" [hidden] = "showError">
+        Input must be more than 3 characters
+    </div>
+</div>
