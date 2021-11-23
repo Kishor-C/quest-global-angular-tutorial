@@ -1,0 +1,11 @@
+<div>
+    <h3>Simple User Form!</h3>
+    <!--ngForm creates a form object whose properties are input name
+    and values are the input you enter -->
+    <form #loginForm = "ngForm" (ngSubmit) = "save(loginForm.value)">
+        Enter username <input type = "text" name = "un" ngModel> <br />
+        Enter password <input type = "password" name = "pw" ngModel> <br />
+        <input type = "submit" value = "Login">
+    </form>
+   
+</div>

@@ -10,13 +10,14 @@ import { PropertyBindComponent } from './property-bind/property-bind.component';
 import { StyleClassBindComponent } from './style-class-bind/style-class-bind.component';
 import { TwoDataBindComponent } from './two-data-bind/two-data-bind.component';
 import { FormsModule } from '@angular/forms';
+import { FormsTwoWayBindComponent } from './forms-two-way-bind/forms-two-way-bind.component';
 
 @NgModule({
   declarations: [
     AppComponent,    FirstComponent,
     SecondComponent,    EventBindComponent,
     EventBind2Component,    PropertyBindComponent,
-    StyleClassBindComponent,    TwoDataBindComponent
+    StyleClassBindComponent,    TwoDataBindComponent, FormsTwoWayBindComponent
   ],
   imports: [
     BrowserModule, FormsModule

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-two-data-bind',
   templateUrl: './two-data-bind.component.html',
@@ -8,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 export class TwoDataBindComponent  {
   firstname : string | undefined = undefined;
   phoneNumber: number | undefined = undefined;
+  
   updateData() {
     this.firstname = 'Sachin';
     this.phoneNumber = 99889993;
   }
 }
+
