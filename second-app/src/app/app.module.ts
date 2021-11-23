@@ -7,18 +7,19 @@ import { SecondComponent } from './second/second.component';
 import { EventBindComponent } from './event-bind/event-bind.component';
 import { EventBind2Component } from './event-bind2/event-bind2.component';
 import { PropertyBindComponent } from './property-bind/property-bind.component';
+import { StyleClassBindComponent } from './style-class-bind/style-class-bind.component';
+import { TwoDataBindComponent } from './two-data-bind/two-data-bind.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    FirstComponent,
-    SecondComponent,
-    EventBindComponent,
-    EventBind2Component,
-    PropertyBindComponent
+    AppComponent,    FirstComponent,
+    SecondComponent,    EventBindComponent,
+    EventBind2Component,    PropertyBindComponent,
+    StyleClassBindComponent,    TwoDataBindComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

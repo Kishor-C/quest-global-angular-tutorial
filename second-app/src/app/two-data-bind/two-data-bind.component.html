@@ -1,0 +1,10 @@
+<div>
+    <h3>Two way databinding</h3>
+    <p>Firstname: {{firstname}}</p>
+    <p>Phone: {{phoneNumber}}</p>
+    Enter Firstname: <input type = "text" [(ngModel)] = "firstname">
+    Firstname: <input type = "text" [(ngModel)] = "firstname"> <br />
+    Enter Phone no: <input type = "text" [(ngModel)] = "phoneNumber"> 
+    Phone no: <input type = "text" [(ngModel)] = "phoneNumber"> <br />
+    <button (click) = "updateData()">Update</button>
+</div>

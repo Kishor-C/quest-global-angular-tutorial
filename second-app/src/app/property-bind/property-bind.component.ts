@@ -10,6 +10,7 @@ export class PropertyBindComponent  {
   divContent : string = "Hello div element";
   myInput : string | undefined = undefined;
   showError: boolean = true;
+  
   toggleDisabled() {
     this.isDisabled = !this.isDisabled;
   }
