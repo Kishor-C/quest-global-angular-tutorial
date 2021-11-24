@@ -1,0 +1,7 @@
+<div>
+    <h2>Demo on NgIf</h2>
+    <button (click) = "toggle()">Toggle Condition</button>
+    <div *ngIf = "isAvailable">Showing some content with NgIf</div>
+    <div [hidden] = "isAvailable">Showing some content with hidden</div>
+    <div *ngIf = "name">Name is: {{name}}</div>
+</div>
