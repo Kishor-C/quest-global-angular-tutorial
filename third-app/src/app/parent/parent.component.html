@@ -1,0 +1,11 @@
+<div>
+    <h2>Parent component</h2>
+    <div>Product name: {{productName}}</div>
+    <input type = "text" name = "pn" [(ngModel)] = "productName">
+    <app-child [itemName] = "productName"></app-child>
+    <hr />
+    <h2>Parent component</h2>
+    <div *ngFor = "let name of userLists">
+        <app-user-item [username] = "name"></app-user-item>
+    </div>
+</div>
