@@ -2,7 +2,13 @@
     <h2>Parent component</h2>
     <div>Product name: {{productName}}</div>
     <input type = "text" name = "pn" [(ngModel)] = "productName">
-    <app-child [itemName] = "productName"></app-child>
+    <h3>Parent Counter: {{parentCounter}}</h3>
+    <app-child (eventCounter) = "parentCounter = $event" 
+            [itemName] = "productName"></app-child>
+    <hr />
+    <h2>Calling parent component function from child component event</h2>
+    <p>x: {{x}}</p>
+    <app-child (eventCounter) = "demo($event)"></app-child>
     <hr />
     <h2>Parent component</h2>
     <div *ngFor = "let name of userLists">

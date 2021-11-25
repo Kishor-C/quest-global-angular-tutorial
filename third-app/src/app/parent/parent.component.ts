@@ -8,4 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ParentComponent {
   productName : string = "Laptop";
   userLists : string[] = ["Virat", "Rohith", "Yuvraj"];
+  parentCounter : number = 0;
+  x: number = 0;
+  demo(x: number) : void {
+    this.x = x;
+  }
 }

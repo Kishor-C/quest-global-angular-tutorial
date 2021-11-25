@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -9,4 +9,13 @@ export class ChildComponent  {
   //<app-child [itemName] = "parentProperty">
   @Input()
   itemName : string = ""; 
+  // <app-child (eventCounter) = "parentProperty = $event">
+  @Output()
+  eventCounter : EventEmitter<number> = new EventEmitter<number>();
+  childCounter : number = 0;
+  // call this function to emit the value represented by $event
+  updateCounter() : void {
+    this.childCounter++;
+    this.eventCounter.emit(this.childCounter);
+  }
 }
