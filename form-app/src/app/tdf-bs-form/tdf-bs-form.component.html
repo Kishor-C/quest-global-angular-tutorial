@@ -1,0 +1,30 @@
+<div>
+    <div class = "row">
+        <div class = "col-6 alert alert-secondary">
+            <h2 class = "text-center">A simple Form</h2>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-6 alert alert-primary">
+            <form #demoForm = "ngForm">
+                <div class = "row">
+                    <div class = "col-6">
+                        <input type = "text" class = "form-control" name = "fn" 
+                            autocomplete="off" placeholder="Enter firstname" 
+                            ngModel #tf1 = "ngModel" required>
+                    </div>
+                    <div class = "col-6 alert alert-danger" 
+                        [hidden] = "tf1.pristine || tf1.valid">
+                        Firstname is required!
+                    </div>
+                </div>
+                <br />
+                <div class = "row">
+                    <div class = "col-3">
+                        <input type = "submit" value = "submit" class = "btn btn-secondary">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

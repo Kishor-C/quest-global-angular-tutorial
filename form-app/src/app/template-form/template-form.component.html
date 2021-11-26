@@ -1,0 +1,19 @@
+<div>
+    <h2>Demo on Template driven form!</h2> <hr />
+    <form #userForm = "ngForm" (ngSubmit) = "submitForm(userForm.value)">
+        <input type = "text" name = "firstname" ngModel  #fn = "ngModel"
+            placeholder="Enter firstname" autocomplete="off" required>
+        <span [hidden] = "fn.valid || fn.pristine">Firstname is required</span>
+        <br />
+        <input type = "text" name = "lastname" ngModel #ln = "ngModel"
+            placeholder="Enter lastname" autocomplete="off" required>
+        <span [hidden] = "ln.valid || ln.pristine">Lastname is required</span>
+        <br />
+        <input type = "submit" value = "Submit" [disabled] = "userForm.invalid">
+    </form>
+    <p>Userform value: {{userForm.value | json}}</p>
+    <p>Userform valid: {{userForm.valid}}</p>
+    <p>Userform invalid: {{userForm.invalid}}</p>
+    <p><b>Firstname</b> valid: {{fn.valid}}, pristine: {{fn.pristine}}, invalid: {{fn.invalid}}</p>
+    <p><b>Lastname</b> valid: {{ln.valid}}, pristine: {{ln.pristine}}, invalid: {{ln.invalid}}</p>
+</div>
