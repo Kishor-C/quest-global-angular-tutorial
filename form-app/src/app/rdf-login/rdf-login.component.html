@@ -1,0 +1,18 @@
+<div class = "container-fluid">
+    <label>
+        Username <input type = "text" [formControl] = "username">
+    </label>
+    <br />
+    <label>
+        Password <input type = "password" [formControl] = "password">
+    </label>
+    <br />
+    <button (click) = "handleClick()" [disabled] = 'username.invalid || password.invalid'>Click</button>
+   
+    <p [hidden] = "username.valid || username.pristine" class = "text-danger">
+        Username is required
+    </p>
+    <p [hidden] = "password.valid || password.pristine" class = "text-danger">
+        Password is required and must be morethan 2 characters
+    </p>
+</div>
