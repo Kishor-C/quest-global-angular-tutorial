@@ -1,0 +1,23 @@
+<div>
+    <h2>User Registration Form!</h2>
+    <form [formGroup] = "userForm" (ngSubmit) = "handleSubmit()">
+        <div class = "form-group">
+            <label>
+                Firstname <input type = "text" formControlName = "firstname" class = "form-control">
+            </label>
+        </div>
+        <div class = "form-group">
+            <label>
+                Lastname <input type = "text" formControlName = "lastname"  class = "form-control">
+            </label>
+        </div>
+        <div class = "form-group">
+            <label>
+                Phone <input type = "number" formControlName = "phone"  class = "form-control">
+            </label>
+        </div>
+        <div>
+            <input type = "submit" value = "submit" class = "btn btn-primary">
+        </div>
+    </form>
+</div>

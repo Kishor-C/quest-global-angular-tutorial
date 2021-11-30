@@ -1,0 +1,27 @@
+<div>
+    <h2>Form Builder Demo!</h2>
+    <form [formGroup] = "userForm" (ngSubmit) = "handleSubmit()">
+        <div>
+            <label>
+                Firstname <input type = "text" formControlName = "firstname">
+                <span class = "text-danger" 
+                [hidden] = "userForm.controls['firstname'].valid || userForm.controls['firstname'].pristine">
+                Firstname needs to be atleast 3 characters
+            </span>
+            </label>
+           
+        </div>
+        <div>
+            <label>
+                Lastname <input type = "text" formControlName = "lastname">
+                <span class = "text-danger"
+                [hidden] = "userForm.controls['lastname'].valid || userForm.controls['lastname'].pristine">
+                Lastname needs to be atleast 2 characters
+            </span>
+            </label>
+        </div>
+        <div>
+            <input type = "submit" value = "submit" class = "btn btn-primary" [disabled] = "userForm.invalid">
+        </div>
+    </form>
+</div>

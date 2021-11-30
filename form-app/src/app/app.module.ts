@@ -7,13 +7,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TdfBsFormComponent } from './tdf-bs-form/tdf-bs-form.component';
 import { RdfLoginComponent } from './rdf-login/rdf-login.component';
 import { RdfUserInfoComponent } from './rdf-user-info/rdf-user-info.component';
+import { MdfBuilderDemoComponent } from './mdf-builder-demo/mdf-builder-demo.component';
 @NgModule({
   declarations: [
     AppComponent,
     TemplateFormComponent,
     TdfBsFormComponent,
     RdfLoginComponent,
-    RdfUserInfoComponent
+    RdfUserInfoComponent,
+    MdfBuilderDemoComponent
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule
