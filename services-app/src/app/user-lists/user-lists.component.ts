@@ -13,7 +13,10 @@ export class UserListsComponent implements OnInit {
   ngOnInit(): void {
   }
   refresh() {
-    this.users = this._service.fetchUsers();
+    this._service.fetchUsers().subscribe(responseData => this.users = responseData);
   }
-
+  delete(u : any) {
+    this._service.deleteUserById(u.id).subscribe(responseData => console.log(responseData));
+    this.refresh();
+  }
 }

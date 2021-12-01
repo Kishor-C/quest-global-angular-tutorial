@@ -1,0 +1,19 @@
+<div>
+    <h2>Find User</h2>
+    <form [formGroup] = "idForm" (ngSubmit) = "search()">
+        <div class = "form-group">
+            <label>
+                Id : <input type = "number" formControlName = "id">
+            </label>
+        </div>
+        <div>
+            <input type = "submit" value = "submit" class = "btn btn-primary">
+        </div>
+    </form>
+    <div class = "text-success" *ngIf = "user">
+        {{user | json}}
+    </div>
+    <div class = "text-danger" *ngIf = "error">
+        {{error | json}}
+    </div>
+</div>

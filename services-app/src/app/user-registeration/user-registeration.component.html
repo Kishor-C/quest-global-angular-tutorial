@@ -3,6 +3,11 @@
     <form [formGroup] = "userForm" (ngSubmit) = "handleSubmit()">
         <div class = "form-group">
             <label>
+                Id <input type = "number" formControlName = "id" class = "form-control">
+            </label>
+        </div>
+        <div class = "form-group">
+            <label>
                 Firstname <input type = "text" formControlName = "firstname" class = "form-control">
             </label>
         </div>
@@ -20,4 +25,7 @@
             <input type = "submit" value = "submit" class = "btn btn-primary">
         </div>
     </form>
+    <div *ngIf = "message">
+        {{message | json}}
+    </div>
 </div>

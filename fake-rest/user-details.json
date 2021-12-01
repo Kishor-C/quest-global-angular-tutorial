@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": 100,
+      "firstname": "Virat",
+      "lastname": "Kholi",
+      "phone": 99433923
+    }
+  ]
+}

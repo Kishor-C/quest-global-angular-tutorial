@@ -8,16 +8,17 @@ import { UserService } from '../user.service';
   styleUrls: ['./user-registeration.component.css']
 })
 export class UserRegisterationComponent implements OnInit {
-
+  message : any | undefined = undefined;
   constructor(private _service : UserService, private _builder : FormBuilder) { }
 
   ngOnInit(): void {
   }
   userForm = this._builder.group({
-    firstname : [''], lastname : [''], phone : ['']
+    id: [''], firstname : [''], lastname : [''], phone : ['']
   });
   handleSubmit() {
-    this._service.save(this.userForm.value);
+    this._service.save(this.userForm.value)
+      .subscribe(responseData => this.message = responseData);
     this.userForm.reset({});
   }
 }
