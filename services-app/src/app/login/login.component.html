@@ -1,0 +1,16 @@
+<div>
+    <form [formGroup] = "loginForm" (ngSubmit) = "authenticate()">
+        <label>
+            Userid: <input type = "number" formControlName = "id">
+        </label>
+        <br />
+        <label>
+            Phone: <input type = "number" formControlName = "phone">
+        </label>
+        <br />
+        <input type = "submit" value = "Login" class = "btn btn-primary">
+    </form>
+    <div *ngIf = "error" class = "text-danger">{{error}}</div>
+    <hr />
+    <a routerLink = "register">Create User</a>
+</div>

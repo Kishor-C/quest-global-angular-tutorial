@@ -1,0 +1,17 @@
+<div>
+    <h3>
+        Success component
+    </h3>
+   <div *ngIf = "user">
+    <p>Id: {{user.id}}</p>
+    <p>Name: {{user.firstname}}</p>
+   </div>
+   <div>
+       <a routerLink = "dashboard">Dashboard</a> /
+       <a routerLink = "search">Search User</a> /
+       <a routerLink = "showAll">Show All Users</a> /
+       <a routerLink = "update">Update User</a> /
+       <a routerLink = "">Logout</a>
+   </div>
+   <router-outlet></router-outlet>
+</div>

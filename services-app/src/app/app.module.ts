@@ -8,17 +8,27 @@ import { UserListsComponent } from './user-lists/user-lists.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserFetchComponent } from './user-fetch/user-fetch.component';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { SuccessComponent } from './success/success.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
 // below is the routes configuration we need to use in RouterModule
 const routesConfig : Routes = [
-  {path : "", component : UserRegisterationComponent},
+  {path : "", component: LoginComponent},
   {path : "register", component : UserRegisterationComponent},
-  {path : "usersList", component : UserListsComponent},
-  {path : "fetch", component : UserFetchComponent}
+  {path : "success/:userId", component: SuccessComponent, children : [
+    {path : "", component : DashboardComponent},
+    {path : "dashboard", component : DashboardComponent},
+    {path : "search", component : UserFetchComponent},
+    {path : "update", component : UpdateUserComponent},
+    {path : "showAll", component : UserListsComponent}
+  ]}
 ];
 @NgModule({
   declarations: [
     AppComponent,    UserRegisterationComponent,
-    UserListsComponent,    UserFetchComponent
+    UserListsComponent,   UserFetchComponent, LoginComponent, 
+    SuccessComponent, DashboardComponent, UpdateUserComponent
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule,
