@@ -3,8 +3,8 @@
         Success component
     </h3>
    <div *ngIf = "user">
-    <p>Id: {{user.id}}</p>
-    <p>Name: {{user.firstname}}</p>
+    <p>Id: {{user?.id}}</p>
+    <p>Name: {{user?.firstname}}</p>
    </div>
    <div>
        <a routerLink = "dashboard">Dashboard</a> /

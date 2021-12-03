@@ -1,0 +1,41 @@
+<div>
+  <h2>Welcome to Angular with Materials</h2>
+  <div>
+    <form [formGroup] = "simpleForm">
+      <mat-form-field appearance = "fill">
+        <mat-label>Enter Username</mat-label>
+        <input type = "text" autocomplete="off"
+        formControlName = "username" matInput> 
+      </mat-form-field> <br />
+      <mat-form-field appearance = "fill">
+        <mat-label>Enter Password</mat-label>
+        <input type = "password" formControlName = "password" matInput>
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance = "fill">
+        <mat-label>Your Skills</mat-label>
+        <mat-chip-list #tf>
+          <mat-chip *ngFor = "let skill of skills">
+            {{skill}}
+            <button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-chip>
+          <input placeholder="Add skill" 
+            [matChipInputFor] = "tf" 
+            (matChipInputTokenEnd) = "save($event)" 
+            autocomplete="off"> 
+        </mat-chip-list>
+      </mat-form-field>
+    </form>
+  </div>
+  <hr />
+  <button mat-raised-button color = "warn">My Button</button>
+  &nbsp;
+  <button mat-raised-button color = "primary">My Button</button>
+  &nbsp;
+  <button mat-raised-button color = "accent">My Button</button>
+  <div>
+    {{simpleForm.value | json}}
+  </div>
+</div>

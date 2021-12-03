@@ -12,11 +12,13 @@ import { LoginComponent } from './login/login.component';
 import { SuccessComponent } from './success/success.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { UserAuthGuard } from './user-auth.guard';
 // below is the routes configuration we need to use in RouterModule
 const routesConfig : Routes = [
   {path : "", component: LoginComponent},
   {path : "register", component : UserRegisterationComponent},
-  {path : "success/:userId", component: SuccessComponent, children : [
+  {path : "success/:userId", component: SuccessComponent, 
+    canActivate: [UserAuthGuard], children : [
     {path : "", component : DashboardComponent},
     {path : "dashboard", component : DashboardComponent},
     {path : "search", component : UserFetchComponent},

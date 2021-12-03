@@ -14,6 +14,8 @@ export class LoginComponent implements OnInit {
     private _service : UserService, private _router : Router) { }
 
   ngOnInit(): void {
+    // clear all the keys when you visit login component
+    sessionStorage.clear();
   }
   loginForm = this._builder.group({
     id: [''], phone : ['']
@@ -26,6 +28,9 @@ export class LoginComponent implements OnInit {
     this._service.fetchUser(id).subscribe((s) => {
       let temp = s;
       if(temp.phone == phone) {
+        // store the id in a session, since sessionStorage takes only
+        // string we have used id+"" to convert string
+        sessionStorage.setItem('user_id', id+"");
         this._router.navigate(["success", id]);
       } else {
         this.error = "Sorry invalid credentials";
