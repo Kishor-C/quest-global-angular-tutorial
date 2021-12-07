@@ -11,16 +11,24 @@ import { StyleClassBindComponent } from './style-class-bind/style-class-bind.com
 import { TwoDataBindComponent } from './two-data-bind/two-data-bind.component';
 import { FormsModule } from '@angular/forms';
 import { FormsTwoWayBindComponent } from './forms-two-way-bind/forms-two-way-bind.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
     AppComponent,    FirstComponent,
     SecondComponent,    EventBindComponent,
     EventBind2Component,    PropertyBindComponent,
-    StyleClassBindComponent,    TwoDataBindComponent, FormsTwoWayBindComponent
+    StyleClassBindComponent,    TwoDataBindComponent, FormsTwoWayBindComponent, CounterComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, ServiceWorkerModule.register('ngsw-worker.js', {
+  enabled: environment.production,
+  // Register the ServiceWorker as soon as the app is stable
+  // or after 30 seconds (whichever comes first).
+  registrationStrategy: 'registerWhenStable:30000'
+})
   ],
   providers: [],
   bootstrap: [AppComponent]

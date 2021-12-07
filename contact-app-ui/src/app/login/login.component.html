@@ -1,0 +1,28 @@
+<div>
+    <h2>Login Form</h2>
+    <form [formGroup] = "loginForm" (ngSubmit) = "authenticate()">
+        <div class = "form-group">
+            <div class = "row">
+                <div class = "col-3">
+                    <input type = "text" formControlName = "profileId" class = "form-control"
+                    placeholder="Enter profileId">
+                </div>
+                <div class = "col-3">
+                    <input type = "text" formControlName = "password" class = "form-control"
+                    placeholder="Enter password">
+                </div>
+                <div class = "col-1">
+                    <input type = "submit" value = "Login" class = "btn btn-primary" [disabled] = "loginForm.invalid">
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class = "row">
+        <div class = "col-6 text-center alert alert-danger" 
+            [hidden] = "loginForm.controls['profileId'].valid">ProfileId is required</div>
+    </div>
+    <div class = "row">
+        <div class = "col-6 text-center alert alert-danger" [hidden] = "loginForm.controls['password'].valid">Password is required</div>
+    </div>
+  
+</div>

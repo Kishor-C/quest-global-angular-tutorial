@@ -1,9 +1,5 @@
 <div class = "container-fluid">
   <h1>Welcome to {{title}}</h1>
-  <!-- <app-event-bind></app-event-bind> -->
-  <!-- <app-event-bind2></app-event-bind2> -->
-  <!-- <app-property-bind></app-property-bind> -->
-  <!-- <app-style-class-bind></app-style-class-bind> -->
-  <!-- <app-two-data-bind></app-two-data-bind> -->
-  <app-forms-two-way-bind></app-forms-two-way-bind>
+  <button (click) = "changeStatus()">MyButton</button>
+  <app-counter *ngIf = "status"></app-counter>
 </div>
